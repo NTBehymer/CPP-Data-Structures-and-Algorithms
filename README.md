@@ -7,3 +7,4 @@ Repository I created for myself to learn C++ while also going into a deep dive o
  - https://leetcode.com/problems/reverse-linked-list/
  - https://leetcode.com/problems/merge-two-sorted-lists/
  - https://leetcode.com/problems/reorder-list/
+ - https://leetcode.com/problems/remove-nth-node-from-end-of-list/
