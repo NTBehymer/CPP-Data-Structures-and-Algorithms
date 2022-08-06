@@ -32,4 +32,11 @@ int main(){
     print(c1);
     print(c2); // Either of these work as calling the array is the same as calling a pointer to the beginning
 
+    std::cout << "*(c1+2): " << *(c1 + 2) << '\n';
+    std::cout << "c1[2]: " << c1[2] << '\n';  // c1[2] would be the same as it's dereference of *(c1+2)
+
+    int mda[3][2] = {{1,2},{3,4},{5,6}};
+    std::cout << "*(*(mda+1)+2): " << *(*(mda+1)+2) << '\n';
+    std::cout << "*(mda[1]+2): " << *(mda[1]+2) << '\n';
+    std::cout << "mda[1][2]: " << mda[1][2] << '\n'; 
 }
