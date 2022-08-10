@@ -10,3 +10,5 @@ Repository I created for myself to learn C++ while also going into a deep dive o
  - https://leetcode.com/problems/remove-nth-node-from-end-of-list/
  - https://leetcode.com/problems/linked-list-cycle/
  - https://leetcode.com/problems/merge-k-sorted-lists/
+ #### Binary Trees:
+ - https://leetcode.com/problems/invert-binary-tree/submissions/ (https://leetcode.com/submissions/detail/770573260/)
