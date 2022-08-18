@@ -104,6 +104,34 @@ void Postorder(Node* root){
     printf("%d ", root->data);
 } //Preorder, Inorder, and Postorder:  O(n) time complexity  |  O(n) space complexity   
 
+Node* Delete(Node* root, int data){
+    if(root == NULL) return root;
+    else if (data < root->data) root->left = Delete(root->left, data);
+    else if (data > root->data) root->right = Delete(root->right, data);
+    else { // Found the data to be deleted
+        if (root->left == NULL && root->right == NULL){ // If there is no children
+            delete root;
+            root = NULL;
+        }
+        else if(root->left == NULL){ // 1 Child
+            Node* temp = root;
+            root = root->right;
+            delete temp;
+        }
+        else if (root->right == NULL){ // 1 Child
+            Node* temp = root;
+            root = root->left;
+            delete temp;
+        }
+        else { // 2 Children
+            Node* temp = FindMin(root->right);
+            root->data = temp->data;
+            root->right = Delete(root->right, temp->data);
+        }
+    }
+    return root;
+}
+
 int main()
 {
     Node* root = NULL;
@@ -133,5 +161,11 @@ int main()
 
     cout << "Postorder: ";
     Postorder(root);
+    cout << "\n";
+
+    cout << "Delete a node: ";
+    cin>>i;
+    Delete(root, i);
+    Inorder(root);
     cout << "\n";
 }
